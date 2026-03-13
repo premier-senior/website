@@ -4,31 +4,25 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Premier Senior Solutions Brand Colors */
-  --brand-rose: #8B1A4A;
-  --brand-rose-dark: #6d1239;
-  --brand-rose-light: #f5e6ed;
-  --brand-pink-muted: #c4768e;
-
   --background: oklch(1 0 0);
   --foreground: oklch(0.18 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0 0);
-  --primary: oklch(0.38 0.14 0);
+  --primary: oklch(0.38 0.155 3);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.96 0.005 0);
   --secondary-foreground: oklch(0.18 0 0);
   --muted: oklch(0.96 0.005 0);
   --muted-foreground: oklch(0.5 0 0);
   --accent: oklch(0.96 0.005 0);
-  --accent-foreground: oklch(0.38 0.14 0);
+  --accent-foreground: oklch(0.38 0.155 3);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0 0);
   --input: oklch(0.9 0 0);
-  --ring: oklch(0.38 0.14 0);
+  --ring: oklch(0.38 0.155 3);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -37,12 +31,12 @@
   --radius: 0.25rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.38 0.14 0);
+  --sidebar-primary: oklch(0.38 0.155 3);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.38 0.14 0);
+  --sidebar-accent-foreground: oklch(0.38 0.155 3);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.38 0.14 0);
+  --sidebar-ring: oklch(0.38 0.155 3);
 }
 
 .dark {

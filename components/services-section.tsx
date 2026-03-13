@@ -15,7 +15,7 @@ const services = [
     number: "03",
     title: "Support of other ancillary services",
     description:
-      "With over 20 years working in the senior care industry, I can here to be a vital resource for you in not only finding your perfect senior care placement, but also the additional ancillary services available in your area.",
+      "With over 20 years working in the senior care industry, I am here to be a vital resource for you in not only finding your perfect senior care placement, but also the additional ancillary services available in your area.",
   },
   {
     number: "04",
@@ -39,22 +39,22 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-white relative overflow-hidden">
+    <section id="services" className="py-20 bg-background relative overflow-hidden">
       {/* Top divider diamond */}
       <div className="flex justify-center mb-2">
-        <div className="w-3 h-3 rotate-45" style={{ backgroundColor: "#8B1A4A" }} />
+        <div className="w-3 h-3 rotate-45 bg-primary" />
       </div>
 
       <div className="text-center mb-12 px-4">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="h-px w-8 bg-gray-300" />
-          <span className="text-xs font-bold tracking-widest text-gray-400 uppercase">HERE FOR YOU 24/7</span>
-          <div className="h-px w-8 bg-gray-300" />
+          <div className="h-px w-8 bg-border" />
+          <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">HERE FOR YOU 24/7</span>
+          <div className="h-px w-8 bg-border" />
         </div>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-balance">
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
           Services We&apos;re Offering
         </h2>
-        <p className="text-gray-500 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+        <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto leading-relaxed">
           We help you find the perfect senior living community for your loved one. We work with only high-quality senior care communities, making sure they provide the best care possible at an affordable price.
         </p>
       </div>
@@ -64,18 +64,15 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div key={service.number} className="flex gap-5 p-4">
               {/* Number circle */}
-              <div
-                className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm"
-                style={{ backgroundColor: "#8B1A4A" }}
-              >
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                 {service.number}
               </div>
               {/* Content */}
               <div>
-                <h3 className="font-bold text-gray-900 text-base mb-2 leading-snug">
+                <h3 className="font-bold text-foreground text-base mb-2 leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -86,7 +83,7 @@ export default function ServicesSection() {
 
       {/* Bottom divider diamond */}
       <div className="flex justify-center mt-12">
-        <div className="w-3 h-3 rotate-45" style={{ backgroundColor: "#8B1A4A" }} />
+        <div className="w-3 h-3 rotate-45 bg-primary" />
       </div>
     </section>
   )

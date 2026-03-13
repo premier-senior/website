@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Sara Fox",
     avatar: "SF",
-    text: "This company truly gives great attention to the senior customer as well. I love how she is genuine, everything and this. This is the place for me. This premier service I would recommend them to anyone.",
+    text: "This company truly gives great attention to the senior customer as well. I love how she is genuine about everything. This premier service I would recommend them to anyone.",
   },
 ]
 
@@ -28,16 +28,16 @@ export default function TestimonialsSection() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length)
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <div className="h-px w-8 bg-gray-300" />
-            <span className="text-xs font-bold tracking-widest text-gray-400 uppercase">TESTIMONIALS</span>
-            <div className="h-px w-8 bg-gray-300" />
+            <div className="h-px w-8 bg-border" />
+            <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">TESTIMONIALS</span>
+            <div className="h-px w-8 bg-border" />
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-balance">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Client Testimonials
           </h2>
         </div>
@@ -55,28 +55,27 @@ export default function TestimonialsSection() {
           <div className="flex items-center justify-center gap-4 mt-6">
             <button
               onClick={prev}
-              className="w-8 h-8 rounded-full border flex items-center justify-center border-gray-300 hover:border-[#8B1A4A] transition-colors"
+              className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:border-primary transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-4 h-4 text-gray-600" />
+              <ChevronLeft className="w-4 h-4 text-muted-foreground" />
             </button>
             <div className="flex gap-2">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className="w-2 h-2 rounded-full transition-colors"
-                  style={{ backgroundColor: i === current ? "#8B1A4A" : "#d1d5db" }}
+                  className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}
             </div>
             <button
               onClick={next}
-              className="w-8 h-8 rounded-full border flex items-center justify-center border-gray-300 hover:border-[#8B1A4A] transition-colors"
+              className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:border-primary transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-4 h-4 text-gray-600" />
+              <ChevronRight className="w-4 h-4 text-muted-foreground" />
             </button>
           </div>
         </div>
@@ -86,8 +85,7 @@ export default function TestimonialsSection() {
           {testimonials.map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 rounded-full"
-              style={{ backgroundColor: i === 0 ? "#8B1A4A" : "#d1d5db" }}
+              className={`w-2 h-2 rounded-full ${i === 0 ? "bg-primary" : "bg-border"}`}
             />
           ))}
         </div>
@@ -98,18 +96,15 @@ export default function TestimonialsSection() {
 
 function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
   return (
-    <div className="bg-gray-50 rounded-xl p-6 flex flex-col gap-4 shadow-sm">
-      <p className="text-gray-600 text-sm leading-relaxed italic flex-1">
+    <div className="bg-secondary rounded-xl p-6 flex flex-col gap-4 shadow-sm">
+      <p className="text-muted-foreground text-sm leading-relaxed italic flex-1">
         &ldquo;{testimonial.text}&rdquo;
       </p>
-      <div className="flex items-center gap-3 border-t border-gray-200 pt-4">
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0"
-          style={{ backgroundColor: "#8B1A4A" }}
-        >
+      <div className="flex items-center gap-3 border-t border-border pt-4">
+        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xs flex-shrink-0">
           {testimonial.avatar}
         </div>
-        <span className="font-bold text-gray-900 text-sm">{testimonial.name}</span>
+        <span className="font-bold text-foreground text-sm">{testimonial.name}</span>
       </div>
     </div>
   )
