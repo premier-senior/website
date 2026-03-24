@@ -28,48 +28,48 @@ export default function HeroSection() {
 
       {/* Photo Collage */}
       <div className="relative z-10 mt-12 flex items-end justify-center gap-3 px-4 pb-8 w-full max-w-3xl">
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0">
+        <div className="w-20 h-32 md:w-28 md:h-44 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0">
           <Image
             src="/images/senior-care-1.jpg"
             alt="Senior care"
-            width={128}
-            height={128}
+            width={112}
+            height={176}
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0 mb-4">
+        <div className="w-24 h-36 md:w-32 md:h-48 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0 mb-4">
           <Image
             src="/images/caregiver-1.jpg"
             alt="Caregiver"
-            width={144}
-            height={144}
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary-foreground/40 flex-shrink-0">
-          <Image
-            src="/images/about-woman.jpg"
-            alt="Premier Senior Solutions founder"
-            width={192}
+            width={128}
             height={192}
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0 mb-4">
+        <div className="w-28 h-44 md:w-40 md:h-60 rounded-full overflow-hidden border-4 border-primary-foreground/40 flex-shrink-0">
           <Image
-            src="/images/family-1.jpg"
-            alt="Family"
-            width={144}
-            height={144}
+            src="/images/about-woman.jpg"
+            alt="Premier Senior Solutions founder"
+            width={160}
+            height={240}
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0">
+        <div className="w-24 h-36 md:w-32 md:h-48 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0 mb-4">
+          <Image
+            src="/images/family-1.jpg"
+            alt="Family"
+            width={128}
+            height={192}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="w-20 h-32 md:w-28 md:h-44 rounded-full overflow-hidden border-4 border-primary-foreground/30 flex-shrink-0">
           <Image
             src="/images/senior-care-2.jpg"
             alt="Senior living"
-            width={128}
-            height={128}
+            width={112}
+            height={176}
             className="w-full h-full object-cover"
           />
         </div>
