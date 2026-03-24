@@ -1,13 +1,23 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-primary"
+      className="relative flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden"
     >
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+      {/* Background photo */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        priority
+      />
+
+      {/* Primary color overlay at 70% opacity */}
+      <div className="absolute inset-0 bg-primary opacity-70" />
 
       {/* Text Content */}
       <div className="relative z-10 text-center px-4 max-w-2xl mx-auto">
