@@ -1,11 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   const navLinks = [
     { label: "Home", href: "#home" },
@@ -16,7 +23,13 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        backgroundColor: scrolled ? "white" : "transparent",
+        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.10)" : "none",
+      }}
+    >
       <div className="max-w-7xl mx-auto flex items-stretch min-h-[80px]">
 
         {/* Logo block — white card that slightly overflows the bar */}
@@ -66,15 +79,16 @@ export default function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-primary-foreground hover:opacity-80 transition-opacity whitespace-nowrap"
+              className="text-sm font-medium transition-colors duration-300 whitespace-nowrap hover:opacity-70"
+              style={{ color: scrolled ? "oklch(0.18 0 0)" : "white" }}
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="#contact"
-            className="px-6 py-3 text-sm font-black tracking-widest text-primary-foreground rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
-            style={{ backgroundColor: "oklch(0.28 0.13 3)" }}
+            className="px-6 py-3 text-sm font-black tracking-widest text-white rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
+            style={{ backgroundColor: "oklch(0.38 0.155 3)" }}
           >
             CONTACT US
           </Link>
@@ -83,7 +97,8 @@ export default function Header() {
         {/* Mobile Toggle */}
         <div className="md:hidden flex flex-1 items-center justify-end px-4">
           <button
-            className="p-2 text-primary-foreground"
+            className="p-2 transition-colors duration-300"
+            style={{ color: scrolled ? "oklch(0.18 0 0)" : "white" }}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -94,12 +109,19 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/20 px-6 py-4 flex flex-col gap-3">
+        <div
+          className="md:hidden border-t px-6 py-4 flex flex-col gap-3"
+          style={{
+            backgroundColor: scrolled ? "white" : "oklch(0.38 0.155 3)",
+            borderColor: scrolled ? "oklch(0.9 0 0)" : "rgba(255,255,255,0.2)",
+          }}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-primary-foreground hover:opacity-80 py-1"
+              className="text-sm font-medium py-1 hover:opacity-70 transition-opacity"
+              style={{ color: scrolled ? "oklch(0.18 0 0)" : "white" }}
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
@@ -107,7 +129,7 @@ export default function Header() {
           ))}
           <Link
             href="#contact"
-            className="mt-2 px-6 py-3 text-sm font-black tracking-widest text-primary-foreground text-center rounded-lg"
+            className="mt-2 px-6 py-3 text-sm font-black tracking-widest text-white text-center rounded-lg"
             style={{ backgroundColor: "oklch(0.28 0.13 3)" }}
             onClick={() => setMobileOpen(false)}
           >
