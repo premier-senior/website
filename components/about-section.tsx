@@ -75,7 +75,7 @@ export default function AboutSection() {
               The search for the right choice for senior care can be a daunting one. That is where we come in. With over 20 years in the senior health care field, we know this industry inside and out and we are here to be your guiding hand as we navigate it together.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
-              Our process starts with an initial consultation together to discover exactly what is important to you, one of your loved ones, or a community member. We are then there on the journey with you — from scheduling tours of communities, all the way to completing admissions paperwork, collecting reviews, and finding the right and truly senior care provider.
+              Our process starts with an initial consultation together to discover exactly what is important to you and your loved ones in a community. We are then there throughout the entire journey with you – from scheduling tours of communities, all the way to completing admission paperwork, scheduling a move and finding the right ancillary service providers.
             </p>
             <Link
               href="#contact"
