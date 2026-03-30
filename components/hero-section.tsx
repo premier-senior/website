@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-primary opacity-70" />
 
       {/* Text Content */}
-      <div className="relative z-10 text-center px-4 max-w-2xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-2xl mx-auto pb-20">
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight text-balance mb-4">
           Your Helping Hand<br />On The Journey
         </h1>
