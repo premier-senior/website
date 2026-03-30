@@ -11,12 +11,12 @@ const images = [
 export default function CollageBridge() {
   return (
     /*
-      Outer wrapper has no height of its own — it just stacks the two
-      background halves and lets the ovals overflow both.
+      Outer wrapper overlaps the hero section above with negative margin.
+      Background is transparent so hero image shows through the top.
     */
-    <div className="relative w-full overflow-hidden" aria-hidden="false">
-      {/* Top half — primary / rose */}
-      <div className="w-full h-32 md:h-44 bg-primary" />
+    <div className="relative w-full overflow-hidden -mt-20 md:-mt-32" aria-hidden="false">
+      {/* Top half — transparent (hero background shows through) */}
+      <div className="w-full h-32 md:h-44 bg-transparent" />
       {/* Bottom half — white */}
       <div className="w-full h-32 md:h-44 bg-background" />
 
