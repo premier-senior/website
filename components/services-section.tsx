@@ -71,7 +71,7 @@ export default function ServicesSection() {
           Services We&apos;re Offering
         </h2>
         <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-          We help you find the perfect senior living community for your loved one. We work with only high-quality senior care communities, making sure they provide the best care possible at an affordable price.
+          We help you find the perfect senior living community for your loved one. We work with only high-quality senior living communities, making sure they provide the best care possible at an affordable price.
         </p>
       </div>
 
