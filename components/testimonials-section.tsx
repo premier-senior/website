@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
 function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
   return (
     <div className="bg-secondary rounded-xl p-6 flex flex-col gap-4 shadow-sm">
-      <p className="text-muted-foreground text-sm leading-relaxed italic flex-1">
+      <p className="text-muted-foreground font-poppins font-bold not-italic text-[14px] leading-relaxed flex-1">
         &ldquo;{testimonial.text}&rdquo;
       </p>
       <div className="flex items-center gap-3 border-t border-border pt-4">

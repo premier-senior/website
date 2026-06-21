@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Lato, Dosis } from 'next/font/google'
+import { Lato, Dosis, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -13,6 +13,12 @@ const dosis = Dosis({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-dosis',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
 })
 
 export const metadata: Metadata = {
@@ -29,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${dosis.variable} font-sans antialiased`}>
+      <body className={`${lato.variable} ${dosis.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
