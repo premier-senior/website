@@ -16,9 +16,9 @@ export default function CollageBridge() {
     */
     <div className="relative w-full overflow-hidden -mt-20 md:-mt-32" aria-hidden="false">
       {/* Top half — transparent (hero background shows through) */}
-      <div className="w-full h-32 md:h-44 bg-transparent" />
+      <div className="w-full h-48 md:h-56 bg-transparent" />
       {/* Bottom half — white */}
-      <div className="w-full h-32 md:h-44 bg-background" />
+      <div className="w-full h-48 md:h-56 bg-background" />
 
       {/* Oval images — absolutely centred across the split */}
       <div className="absolute inset-0 flex items-center justify-center gap-1 md:gap-2 px-4">
