@@ -69,7 +69,7 @@ export default function AboutSection() {
               My Passion
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
-              Premier Senior Solutions strives to be there for seniors and their families to assist them through the next chapter of their journey. We are committed to being there for families and helping seniors live their best life for as long as possible.
+              Premier Senior Solutions dedication belongs to seniors and their families, to assist them in the next chapter of their journey. We are committed to finding the best options for seniors to live their best life yet!
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
               The search for the right choice for senior care can be a daunting one. That is where we come in. With over 20 years in the senior health care field, we know this industry inside and out and we are here to be your guiding hand as we navigate it together.
