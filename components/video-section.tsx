@@ -21,10 +21,7 @@ export default function VideoSection() {
               Navigating the next chapter
             </h2>
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-4">
-              Making the move to senior living is a big step for your family, and we are here to be with you with seamless guidance through all the steps. We ensure that your home will meet your needs and be safe and comfortable.
-            </p>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-              Find your perfect match for premier senior living and let us take you there to your next chapter of premier senior care.
+              Making the move to senior living is a big step for your family, and we're here to help you with our expertise and guidance throughout the process. We ensure that your new home will suit your needs and be safe and comfortable.
             </p>
           </div>
 
