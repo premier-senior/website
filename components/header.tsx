@@ -15,11 +15,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Resources", href: "#resources" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "About Us", href: "#about" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/#services" },
+    { label: "Resources", href: "/#resources" },
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "About Us", href: "/#about" },
   ]
 
   return (
@@ -34,7 +34,7 @@ export default function Header() {
 
         {/* Logo block — white card that slightly overflows the bar */}
         <Link
-          href="#home"
+          href="/"
           className="relative flex-shrink-0 bg-white flex flex-col items-center justify-center px-6 py-4 rounded-b-2xl shadow-md self-start mt-0 min-w-[160px]"
           style={{ zIndex: 10 }}
         >
@@ -86,7 +86,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/#contact"
             className="px-6 py-3 text-sm font-black tracking-widest text-white rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
             style={{ backgroundColor: "oklch(0.38 0.155 3)" }}
           >
@@ -128,7 +128,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/#contact"
             className="mt-2 px-6 py-3 text-sm font-black tracking-widest text-white text-center rounded-lg"
             style={{ backgroundColor: "oklch(0.28 0.13 3)" }}
             onClick={() => setMobileOpen(false)}
