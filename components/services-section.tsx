@@ -39,22 +39,26 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
+    <section
+      id="services"
+      className="py-20 relative overflow-hidden"
+      style={{ background: "linear-gradient(to bottom, #af5e8a, #891c51)" }}
+    >
       {/* Top divider diamond */}
       <div className="flex justify-center mb-2">
-        <div className="w-3 h-3 rotate-45 bg-primary" />
+        <div className="w-3 h-3 rotate-45 bg-white" />
       </div>
 
       <div className="text-center mb-12 px-4">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="h-px w-8 bg-border" />
-          <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">HERE FOR YOU 24/7</span>
-          <div className="h-px w-8 bg-border" />
+          <div className="h-px w-8 bg-white/40" />
+          <span className="text-xs font-bold tracking-widest text-white uppercase">HERE FOR YOU 24/7</span>
+          <div className="h-px w-8 bg-white/40" />
         </div>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-balance">
           Services We&apos;re Offering
         </h2>
-        <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+        <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
           We help you find the perfect senior living community for your loved one. We work with only high-quality senior care communities, making sure they provide the best care possible at an affordable price.
         </p>
       </div>
@@ -64,15 +68,15 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div key={service.number} className="flex gap-5 p-4">
               {/* Number circle */}
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary font-bold text-sm">
                 {service.number}
               </div>
               {/* Content */}
               <div>
-                <h3 className="font-bold text-foreground text-base mb-2 leading-snug">
+                <h3 className="font-bold text-white text-base mb-2 leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-white/80 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -83,7 +87,7 @@ export default function ServicesSection() {
 
       {/* Bottom divider diamond */}
       <div className="flex justify-center mt-12">
-        <div className="w-3 h-3 rotate-45 bg-primary" />
+        <div className="w-3 h-3 rotate-45 bg-white" />
       </div>
     </section>
   )
