@@ -41,9 +41,21 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-20 relative overflow-hidden"
+      className="py-20 relative"
       style={{ background: "linear-gradient(to bottom, #af5e8a, #891c51)" }}
     >
+      {/* Top center triangle peak */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -top-6"
+        style={{
+          width: 0,
+          height: 0,
+          borderLeft: "40px solid transparent",
+          borderRight: "40px solid transparent",
+          borderBottom: "24px solid #af5e8a",
+        }}
+      />
+
       {/* Top divider diamond */}
       <div className="flex justify-center mb-2">
         <div className="w-3 h-3 rotate-45 bg-white" />
