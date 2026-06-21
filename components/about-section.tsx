@@ -9,54 +9,13 @@ export default function AboutSection() {
 
           {/* Left: Photo Collage */}
           <div className="relative w-full lg:w-1/2 flex-shrink-0 order-2 lg:order-1">
-            <div className="relative w-full max-w-lg mx-auto" style={{ height: "480px" }}>
-              <div className="absolute top-0 left-0 w-48 h-48 rounded-full overflow-hidden border-4 border-background shadow-lg">
-                <Image
-                  src="/images/caregiver-1.jpg"
-                  alt="Senior care services"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute top-6 right-8 w-36 h-36 rounded-full overflow-hidden border-4 border-background shadow-lg">
-                <Image
-                  src="/images/family-1.jpg"
-                  alt="Family care"
-                  width={144}
-                  height={144}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute top-28 left-16 w-52 h-52 rounded-full overflow-hidden border-4 border-background shadow-xl z-10">
-                <Image
-                  src="/images/about-woman.jpg"
-                  alt="Founder of Premier Senior Solutions"
-                  width={208}
-                  height={208}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-12 right-0 w-44 h-44 rounded-full overflow-hidden border-4 border-background shadow-lg">
-                <Image
-                  src="/images/senior-care-2.jpg"
-                  alt="Senior living"
-                  width={176}
-                  height={176}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 left-4 w-36 h-24 rounded-xl overflow-hidden border-4 border-background shadow-lg">
-                <Image
-                  src="/images/senior-care-1.jpg"
-                  alt="Care facility"
-                  width={144}
-                  height={96}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute bottom-16 left-0 w-20 h-20 rounded-lg bg-primary opacity-15" />
-            </div>
+            <Image
+              src="/images/about-collage.png"
+              alt="Jenny Kenderes of Premier Senior Solutions in various settings"
+              width={690}
+              height={800}
+              className="w-full max-w-lg mx-auto h-auto"
+            />
           </div>
 
           {/* Right: Text Content */}
