@@ -101,6 +101,18 @@ export default function ServicesSection() {
       <div className="flex justify-center mt-12">
         <div className="w-3 h-3 rotate-45 bg-white" />
       </div>
+
+      {/* Bottom center triangle peak */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -bottom-6"
+        style={{
+          width: 0,
+          height: 0,
+          borderLeft: "40px solid transparent",
+          borderRight: "40px solid transparent",
+          borderTop: "24px solid #891c51",
+        }}
+      />
     </section>
   )
 }
