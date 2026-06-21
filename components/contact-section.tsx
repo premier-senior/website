@@ -30,7 +30,7 @@ export default function ContactSection() {
               Get in touch
             </h2>
             <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-              Cut costs through the process of finding a senior care facility that is right for you or your loved one — Jenny will help you connect with the right community and move forward.
+              Call now to begin the process of finding a senior care facility that is right for you or your loved one. Jenny will help you schedule your initial consultation.
             </p>
           </div>
 
