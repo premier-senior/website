@@ -5,19 +5,24 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Jana S.",
-    avatar: "JS",
-    text: "Jenny is the best! She went above and beyond to help me and I truly adore this location. You'll not to truly tell! We would recommend her to anyone looking to find a placement!",
+    name: "Susie B.",
+    avatar: "SB",
+    text: "Jenny is the best! She went above and beyond helping my husband and I find a place for his father. And it was no easy task! We would recommend her to anyone looking for this type of service!",
   },
   {
     name: "Julie Burke",
     avatar: "JB",
-    text: "Jenny is the absolute BEST! She is a HUGE advocate and resource for placing your loved one in a living situation to make it right and she is amazing! Jenny is your girl!",
+    text: "Jenny is the absolute BEST! This is a HUGE decision and knowing you have someone who is caring and loving in your corner to make it right is so important. Jenny is your girl!",
   },
   {
-    name: "Sara Fox",
-    avatar: "SF",
-    text: "This company truly gives great attention to the senior customer as well. I love how she is genuine about everything. This premier service I would recommend them to anyone.",
+    name: "Dana Acy",
+    avatar: "DA",
+    text: "This company really gave great attention to the details. Sometimes we don't know how to process everything and they filled in the gaps for me. Truly priceless service I would recommend them to anyone.",
+  },
+  {
+    name: "Warren R.",
+    avatar: "WR",
+    text: "It takes a special person to do what you do. I'm glad our paths crossed, I know the outcome for my Uncle would not have been as good as it is if I were doing this on my own.",
   },
 ]
 
@@ -42,11 +47,12 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* Desktop: 3 cards */}
+        {/* Desktop: sliding window of 3 cards */}
         <div className="hidden md:grid grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
-          ))}
+          {[0, 1, 2].map((offset) => {
+            const index = (current + offset) % testimonials.length
+            return <TestimonialCard key={index} testimonial={testimonials[index]} />
+          })}
         </div>
 
         {/* Mobile: Single card with carousel */}
@@ -83,9 +89,11 @@ export default function TestimonialsSection() {
         {/* Desktop pagination dots */}
         <div className="hidden md:flex justify-center gap-2 mt-8">
           {testimonials.map((_, i) => (
-            <div
+            <button
               key={i}
-              className={`w-2 h-2 rounded-full ${i === 0 ? "bg-primary" : "bg-border"}`}
+              onClick={() => setCurrent(i)}
+              className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
+              aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}
         </div>
