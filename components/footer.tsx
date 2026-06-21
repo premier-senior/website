@@ -3,12 +3,12 @@ import Image from "next/image"
 
 export default function Footer() {
   const quickLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Resources", href: "#resources" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "Resources", href: "/resources" },
+    { label: "Contact Us", href: "/contact" },
   ]
 
   return (

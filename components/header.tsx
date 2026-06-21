@@ -86,7 +86,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact"
             className="px-6 py-3 text-sm font-black tracking-widest text-white rounded-lg transition-opacity hover:opacity-90 whitespace-nowrap"
             style={{ backgroundColor: "oklch(0.38 0.155 3)" }}
           >
@@ -128,7 +128,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact"
             className="mt-2 px-6 py-3 text-sm font-black tracking-widest text-white text-center rounded-lg"
             style={{ backgroundColor: "oklch(0.28 0.13 3)" }}
             onClick={() => setMobileOpen(false)}
