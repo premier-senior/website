@@ -21,7 +21,7 @@ export default function CollageBridge() {
       <div className="w-full h-32 md:h-44 bg-background" />
 
       {/* Oval images — absolutely centred across the split */}
-      <div className="absolute inset-0 flex items-center justify-center gap-3 md:gap-5 px-4">
+      <div className="absolute inset-0 flex items-center justify-center gap-1 md:gap-2 px-4">
         {images.map((img, i) => (
           <div
             key={i}
