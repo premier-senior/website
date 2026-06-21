@@ -76,7 +76,7 @@ export default function ContactSection() {
               />
               <button
                 type="submit"
-                className="px-10 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary transition-all hover:opacity-90"
+                className="px-10 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary rounded-xl shadow-[0_0_22px_4px_rgba(193,118,142,0.55)] transition-all hover:shadow-[0_0_28px_6px_rgba(193,118,142,0.7)] hover:opacity-95"
               >
                 SUBMIT
               </button>

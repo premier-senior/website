@@ -29,7 +29,7 @@ export default function HeroSection() {
         </p>
         <Link
           href="#about"
-          className="inline-block px-8 py-3 bg-primary-foreground text-primary font-bold text-sm tracking-wider transition-all hover:opacity-90"
+          className="inline-block px-8 py-3 bg-primary-foreground text-primary font-bold text-sm tracking-wider rounded-xl shadow-[0_0_22px_4px_rgba(255,255,255,0.35)] transition-all hover:shadow-[0_0_28px_6px_rgba(255,255,255,0.5)] hover:opacity-95"
         >
           LEARN MORE
         </Link>

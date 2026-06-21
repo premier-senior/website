@@ -79,7 +79,7 @@ export default function AboutSection() {
             </p>
             <Link
               href="#contact"
-              className="inline-block px-8 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary transition-all hover:opacity-90"
+              className="inline-block px-8 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary rounded-xl shadow-[0_0_22px_4px_rgba(193,118,142,0.55)] transition-all hover:shadow-[0_0_28px_6px_rgba(193,118,142,0.7)] hover:opacity-95"
             >
               LEARN MORE
             </Link>
