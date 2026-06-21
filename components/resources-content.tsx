@@ -7,7 +7,7 @@ const careTypes = [
     title: "Independent Living",
     image: "/images/res-living.png",
     description:
-      "Specifically designed for independent seniors who are able to live on their own in an apartment or house, but who want the conveniences of living within a community that provides services and amenities such as housekeeping, social activities, outings and meals. Amenities often include a beauty/barber shop, fitness center, library, club meeting room and some transportation. This type of community fosters a great sense of community among residents.",
+      "Specifically designed for independent seniors who are able to live on their own in an apartment or house, but who want the conveniences of living within a community that provides services and amenities such as housekeeping, social activities, outings and meals. Amenities often include a beauty/barber shop, fitness center, library, club meeting room and some transportation. This type of community fosters a great sense of community among residents",
   },
   {
     title: "55 + Active Senior Apartments",
