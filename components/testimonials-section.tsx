@@ -1,27 +1,28 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
     name: "Susie B.",
-    avatar: "SB",
+    gender: "woman",
     text: "Jenny is the best! She went above and beyond helping my husband and I find a place for his father. And it was no easy task! We would recommend her to anyone looking for this type of service!",
   },
   {
     name: "Julie Burke",
-    avatar: "JB",
+    gender: "woman",
     text: "Jenny is the absolute BEST! This is a HUGE decision and knowing you have someone who is caring and loving in your corner to make it right is so important. Jenny is your girl!",
   },
   {
     name: "Dana Acy",
-    avatar: "DA",
+    gender: "woman",
     text: "This company really gave great attention to the details. Sometimes we don't know how to process everything and they filled in the gaps for me. Truly priceless service I would recommend them to anyone.",
   },
   {
     name: "Warren R.",
-    avatar: "WR",
+    gender: "man",
     text: "It takes a special person to do what you do. I'm glad our paths crossed, I know the outcome for my Uncle would not have been as good as it is if I were doing this on my own.",
   },
 ]
@@ -109,9 +110,13 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
         &ldquo;{testimonial.text}&rdquo;
       </p>
       <div className="flex items-center gap-3 border-t border-border pt-4">
-        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xs flex-shrink-0">
-          {testimonial.avatar}
-        </div>
+        <Image
+          src={testimonial.gender === "man" ? "/images/avatar-man.png" : "/images/avatar-woman.png"}
+          alt={testimonial.name}
+          width={40}
+          height={40}
+          className="w-10 h-10 rounded-full flex-shrink-0"
+        />
         <span className="font-bold text-foreground text-sm">{testimonial.name}</span>
       </div>
     </div>
