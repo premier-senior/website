@@ -11,7 +11,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-foreground text-background/70 pt-16 pb-6">
+    <footer className="text-white pt-16 pb-6" style={{ backgroundColor: "#2c0719" }}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Col 1: Logo + Description */}
@@ -29,24 +29,24 @@ export default function Footer() {
                 </svg>
               </div>
               <div className="leading-tight">
-                <div className="text-xs font-black tracking-widest uppercase text-background">PREMIER</div>
-                <div className="text-[9px] font-medium tracking-wider uppercase text-background/50">SENIOR SOLUTIONS</div>
+                <div className="text-xs font-black tracking-widest uppercase text-white">PREMIER</div>
+                <div className="text-[9px] font-medium tracking-wider uppercase text-white">SENIOR SOLUTIONS</div>
               </div>
             </div>
-            <p className="text-background/50 text-sm leading-relaxed">
+            <p className="text-white text-sm leading-relaxed">
               Premier Senior Solutions is a senior care placement agency serving the Greater Omaha and Iowa area. We specialize in finding the perfect placement for your loved one, regardless of their needs, desires, and budget.
             </p>
           </div>
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="text-background font-bold text-sm tracking-wider uppercase mb-4">Quick Links</h4>
+            <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Quick Links</h4>
             <ul className="flex flex-col gap-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-background/50 text-sm hover:text-background transition-colors"
+                    className="text-white text-sm hover:text-white/70 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Col 3: Connect */}
           <div>
-            <h4 className="text-background font-bold text-sm tracking-wider uppercase mb-4">Connect</h4>
+            <h4 className="text-white font-bold text-sm tracking-wider uppercase mb-4">Connect</h4>
             {/* Social Icons */}
             <div className="flex gap-3 mb-4">
               <a
@@ -89,21 +89,21 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <div className="flex flex-col gap-2 text-sm text-background/50">
-              <a href="tel:+14024260339" className="hover:text-background transition-colors">
+            <div className="flex flex-col gap-2 text-sm text-white">
+              <a href="tel:+14024260339" className="hover:text-white/70 transition-colors">
                 +1 (402) 426-0339
               </a>
-              <a href="mailto:jennifer@premier-senior.com" className="hover:text-background transition-colors break-all">
+              <a href="mailto:jennifer@premier-senior.com" className="hover:text-white/70 transition-colors break-all">
                 jennifer@premier-senior.com
               </a>
             </div>
             {/* BBB Badge */}
-            <div className="mt-4 inline-flex items-center gap-2 border border-background/20 rounded px-3 py-2">
-              <div className="w-8 h-8 rounded flex items-center justify-center text-background font-black text-xs bg-blue-800">
+            <div className="mt-4 inline-flex items-center gap-2 border border-white/20 rounded px-3 py-2">
+              <div className="w-8 h-8 rounded flex items-center justify-center text-white font-black text-xs bg-blue-800">
                 BBB
               </div>
-              <div className="text-xs text-background/50 leading-tight">
-                <div className="text-background font-semibold">ACCREDITED</div>
+              <div className="text-xs text-white leading-tight">
+                <div className="text-white font-semibold">ACCREDITED</div>
                 <div>BUSINESS</div>
               </div>
             </div>
@@ -111,10 +111,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-background/10 pt-6 text-center">
-          <p className="text-background/30 text-xs">
+        <div className="border-t border-white/10 pt-6 text-center">
+          <p className="text-white text-xs">
             &copy; Copyright 2020 - Premier Senior Solution. All Rights Reserved | Powered By{" "}
-            <span className="text-background/50">Screen Digital</span>
+            <span className="text-white">Screen Digital</span>
           </p>
         </div>
       </div>
