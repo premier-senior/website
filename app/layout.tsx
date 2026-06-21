@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Lato, Playfair_Display } from 'next/font/google'
+import { Lato, Dosis } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -9,10 +9,10 @@ const lato = Lato({
   variable: '--font-lato',
 })
 
-const playfair = Playfair_Display({
+const dosis = Dosis({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-dosis',
 })
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${lato.variable} ${dosis.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
