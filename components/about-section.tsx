@@ -8,7 +8,7 @@ export default function AboutSection() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left: Photo Collage */}
-          <div className="relative w-full lg:w-1/2 flex-shrink-0">
+          <div className="relative w-full lg:w-1/2 flex-shrink-0 order-2 lg:order-1">
             <div className="relative w-full max-w-lg mx-auto" style={{ height: "480px" }}>
               <div className="absolute top-0 left-0 w-48 h-48 rounded-full overflow-hidden border-4 border-background shadow-lg">
                 <Image
@@ -60,7 +60,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right: Text Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <div className="flex items-center gap-3 mb-3">
               <div className="h-px w-8 bg-muted-foreground/40" />
               <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">ABOUT US</span>
