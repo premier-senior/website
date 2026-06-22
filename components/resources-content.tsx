@@ -17,7 +17,7 @@ const careTypes = [
   },
   {
     title: "Assisted Living",
-    image: "/images/res-paperwork.png",
+    image: "/images/res-assisted-living.jpg",
     description:
       "Provides a combination of housing, personalized support services and health care for those seniors who need assistance with the activities of daily living (ADL's) but do not require advanced medical care.",
   },
