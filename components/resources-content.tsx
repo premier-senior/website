@@ -11,7 +11,7 @@ const careTypes = [
   },
   {
     title: "55 + Active Senior Apartments",
-    image: "/images/res-consult.png",
+    image: "/images/res-55-active.jpg",
     description:
       "Age restricted starting at 55 years of age. Independent living that offers a maintenance free apartment that includes access to a clubhouse, fitness center, common areas for parties and social gatherings. On-site management and concierge services.",
   },
