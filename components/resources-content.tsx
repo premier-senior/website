@@ -5,7 +5,7 @@ import { Home, HeartHandshake } from "lucide-react"
 const careTypes = [
   {
     title: "Independent Living",
-    image: "/images/res-living.png",
+    image: "/images/res-independent-living.jpg",
     description:
       "Specifically designed for independent seniors who are able to live on their own in an apartment or house, but who want the conveniences of living within a community that provides services and amenities such as housekeeping, social activities, outings and meals. Amenities often include a beauty/barber shop, fitness center, library, club meeting room and some transportation. This type of community fosters a great sense of community among residents",
   },
