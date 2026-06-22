@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Header() {
@@ -38,39 +39,14 @@ export default function Header() {
           className="relative flex-shrink-0 bg-white flex flex-col items-center justify-center px-6 py-4 rounded-b-2xl shadow-md self-start mt-0 min-w-[160px]"
           style={{ zIndex: 10 }}
         >
-          {/* Lotus / flower icon */}
-          <svg viewBox="0 0 40 30" className="w-9 h-6 mb-0.5" xmlns="http://www.w3.org/2000/svg">
-            {/* petals */}
-            <ellipse cx="20" cy="15" rx="5" ry="12" fill="#8B1A4A" opacity="0.9"/>
-            <ellipse cx="20" cy="15" rx="5" ry="12" fill="#8B1A4A" opacity="0.9" transform="rotate(35 20 15)"/>
-            <ellipse cx="20" cy="15" rx="5" ry="12" fill="#8B1A4A" opacity="0.9" transform="rotate(-35 20 15)"/>
-            <ellipse cx="20" cy="15" rx="5" ry="12" fill="#a0275e" opacity="0.6" transform="rotate(65 20 15)"/>
-            <ellipse cx="20" cy="15" rx="5" ry="12" fill="#a0275e" opacity="0.6" transform="rotate(-65 20 15)"/>
-          </svg>
-
-          {/* PREMIER */}
-          <div
-            className="font-serif italic font-bold leading-none tracking-wide text-primary"
-            style={{ fontSize: "22px", letterSpacing: "0.04em" }}
-          >
-            PREMIER
-          </div>
-
-          {/* SENIOR SOLUTIONS */}
-          <div
-            className="font-sans font-bold tracking-widest text-primary uppercase leading-tight"
-            style={{ fontSize: "8px", letterSpacing: "0.18em" }}
-          >
-            SENIOR SOLUTIONS
-          </div>
-
-          {/* SENIOR PLACEMENT SERVICES */}
-          <div
-            className="font-sans tracking-widest text-muted-foreground uppercase leading-tight mt-0.5"
-            style={{ fontSize: "6px", letterSpacing: "0.14em" }}
-          >
-            SENIOR PLACEMENT SERVICES
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Premier Senior Solutions — Senior Placement Services"
+            width={160}
+            height={70}
+            className="w-40 h-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav — right side */}
