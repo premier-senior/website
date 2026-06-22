@@ -41,7 +41,7 @@ const careTypes = [
   },
   {
     title: "Continuing Care Retirement Community (CCRC)",
-    image: "/images/res-living.png",
+    image: "/images/res-continuing-care.jpg",
     description:
       "Offers a long-term care contract that provides for a combination of services as needed: independent living, assisted living, memory care and nursing care. Provides assistance for activities of daily living as needed.",
   },
