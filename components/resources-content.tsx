@@ -29,7 +29,7 @@ const careTypes = [
   },
   {
     title: "Alzheimer's/Dementia",
-    image: "/images/res-consult.png",
+    image: "/images/res-dementia.jpg",
     description:
       "May be cared for at the Assisted Living or Residential Care level. Many facilities have special training for the progression of this disease. The communities we partner with employ specially-trained professionals, skilled in optimizing functions and behaviors associated with memory impairment.",
   },
