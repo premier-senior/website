@@ -32,7 +32,7 @@ export default function HeroSection() {
         <p className="text-primary-foreground/80 text-sm md:text-base leading-relaxed mb-8 max-w-md mx-auto">
           The inspiration to create this business was drawn from over 20 years of working in healthcare.
         </p>
-        <p className="text-white/85 text-sm md:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+        <p className="text-white/85 text-sm md:text-xl leading-relaxed mb-8 max-w-xl mx-auto">
           When it comes to your loved ones, you only want the best. Premier senior living prides itself in providing trusted senior living solutions to help you find the perfect fit. Our expert team will help you navigate the world of senior living and find the right place for you.
         </p>
         <Link
