@@ -16,8 +16,13 @@ export default function HeroSection() {
         priority
       />
 
-      {/* Primary color overlay at 70% opacity */}
-      <div className="absolute inset-0 bg-primary opacity-70" />
+      {/* Rose gradient overlay at 88% opacity (matches other page heroes) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg, rgba(137,28,81,0.88), rgba(175,94,138,0.88))",
+        }}
+      />
 
       {/* Text Content */}
       <div className="relative z-10 text-center px-4 max-w-2xl mx-auto pb-20">
