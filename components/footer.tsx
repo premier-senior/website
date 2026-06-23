@@ -99,14 +99,14 @@ export default function Footer() {
               </a>
             </div>
             {/* BBB Badge */}
-            <div className="mt-4 inline-flex items-center gap-2 border border-white/20 rounded px-3 py-2">
-              <div className="w-8 h-8 rounded flex items-center justify-center text-white font-black text-xs bg-blue-800">
-                BBB
-              </div>
-              <div className="text-xs text-white leading-tight">
-                <div className="text-white font-semibold">ACCREDITED</div>
-                <div>BUSINESS</div>
-              </div>
+            <div className="mt-4">
+              <Image
+                src="/images/bbb-accredited.png"
+                alt="BBB Accredited Business"
+                width={180}
+                height={66}
+                className="h-auto w-40 rounded bg-white p-1"
+              />
             </div>
           </div>
         </div>
