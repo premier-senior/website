@@ -114,8 +114,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6 text-center">
           <p className="text-white text-xs">
-            &copy; Copyright 2020 - Premier Senior Solution. All Rights Reserved | Powered By{" "}
-            <span className="text-white">Screen Digital</span>
+            &copy; Copyright 2026 - Premier Senior Solution. All Rights Reserved | Powered By{" "}
+            <span className="text-white">Lek Media</span>
           </p>
         </div>
       </div>
