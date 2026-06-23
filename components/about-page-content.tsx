@@ -77,8 +77,8 @@ export default function AboutPageContent() {
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/jenny-tv.png"
-                alt="Jenny Kenderes, President and CEO of Premier Senior Solutions, in a television interview"
+                src="/images/jenny-tv-interview.jpg"
+                alt="Jenny Kenderes, President and CEO of Premier Senior Solutions, in a WAOH.TV interview on Good Morning Akron"
                 width={700}
                 height={460}
                 className="w-full h-auto object-cover"
