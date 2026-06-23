@@ -57,8 +57,8 @@ export default function AboutPageContent() {
 
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Originally from Westlake, Ohio, Jenny attended St Augustine Academy and is the proud mother of 23 year
-                old Jared and 14 year old triplets Matthew, Marissa and Trevor and two dogs.
+                Originally from Westlake, Ohio, Jenny attended St Augustine Academy and is the proud mother of 26 year
+                old Jared and 16 year old triplets Matthew, Marissa and Trevor and two dogs.
               </p>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 Jenny has spent over 25 years in this industry and is extremely passionate about helping seniors and
