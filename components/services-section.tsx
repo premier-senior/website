@@ -42,7 +42,12 @@ export default function ServicesSection() {
     <section
       id="services"
       className="py-20 relative"
-      style={{ background: "linear-gradient(to bottom, #af5e8a, #891c51)" }}
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(175,94,138,0.8), rgba(137,28,81,0.8)), url('/images/service-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       {/* Top center triangle peak */}
       <div

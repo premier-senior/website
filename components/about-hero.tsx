@@ -25,7 +25,12 @@ export default function AboutHero() {
   return (
     <section
       className="relative overflow-hidden pt-32 pb-12 md:pb-0"
-      style={{ background: "linear-gradient(135deg, #af5e8a, #891c51)" }}
+      style={{
+        backgroundImage:
+          "linear-gradient(135deg, rgba(175,94,138,0.8), rgba(137,28,81,0.8)), url('/images/service-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       {/* Decorative circular accents */}
       <div className="pointer-events-none absolute inset-0 opacity-20">
