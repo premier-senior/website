@@ -87,6 +87,48 @@ export default function AboutPageContent() {
           </div>
         </div>
       </section>
+
+      {/* Meet Holly section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          {/* Left: portrait image */}
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/holly-adkins.png"
+                alt="Holly Adkins, Senior Living Advisor at Premier Senior Solutions"
+                width={700}
+                height={460}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right: bio */}
+          <div className="w-full lg:w-1/2">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-xs font-bold tracking-widest text-primary uppercase">
+                Holly Adkins, Senior Living Advisor
+              </span>
+              <div className="h-px w-8 bg-primary/40" />
+            </div>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Meet Holly</h2>
+
+            <div className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                I am a lifelong resident of Bay Village. I am a wife to Rick, mother and grandmother and enjoy spending
+                time with my family, as well as vacationing at the beach, sewing and creating quilts.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                I felt called to help the senior population in Cleveland, and my 12 years in this industry has fulfilled
+                that dream. I consider myself an advocate and problem solver for seniors and work daily to help families
+                navigate senior care options. I pride myself on meeting my clients where they are at on their journey
+                and assisting them until the best resolution is found.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
