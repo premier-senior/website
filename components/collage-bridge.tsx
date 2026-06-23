@@ -3,7 +3,7 @@ import Image from "next/image"
 const images = [
   { src: "/images/collage-1.jpg", alt: "Caregiver with senior in wheelchair", heightClass: "h-52 md:h-64" },
   { src: "/images/collage-2.jpg", alt: "Elderly couple walking in the park",  heightClass: "h-60 md:h-72" },
-  { src: "/images/collage-3.jpg", alt: "Premier Senior Solutions founder",     heightClass: "h-72 md:h-88" },
+  { src: "/images/collage-3-founder.png", alt: "Premier Senior Solutions founder", heightClass: "h-72 md:h-88" },
   { src: "/images/collage-4.jpg", alt: "Seniors enjoying video games",         heightClass: "h-60 md:h-72" },
   { src: "/images/collage-5.jpg", alt: "Seniors playing chess",                heightClass: "h-52 md:h-64" },
 ]
