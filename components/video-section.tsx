@@ -15,7 +15,7 @@ export default function VideoSection() {
           <div className="w-full lg:w-1/2">
             <div className="flex items-center gap-3 mb-3">
               <div className="h-px w-8 bg-muted-foreground/40" />
-              <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">ENROLL COURSE</span>
+              <span className="text-xs font-bold tracking-widest text-muted-foreground uppercase">Next Chapter</span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Navigating the next chapter
