@@ -54,7 +54,9 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3 mb-4">
               <a
-                href="#"
+                href="https://www.facebook.com/jenny.janoskenderes"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="w-8 h-8 rounded flex items-center justify-center bg-background/10 hover:bg-primary transition-colors"
               >
@@ -63,16 +65,22 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
-                aria-label="YouTube"
+                href="https://www.instagram.com/jlkenderes/?igshid=YmMyMTA2M2Y%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="w-8 h-8 rounded flex items-center justify-center bg-background/10 hover:bg-primary transition-colors"
               >
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-background">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.52V8.48L15.5 12l-5.75 3.52z" />
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-none stroke-background" strokeWidth="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/jenny-kenderes-72294a3/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="w-8 h-8 rounded flex items-center justify-center bg-background/10 hover:bg-primary transition-colors"
               >
