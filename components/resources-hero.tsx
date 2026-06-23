@@ -27,7 +27,7 @@ export default function ResourcesHero() {
       className="relative overflow-hidden pt-32 pb-12 md:pb-0"
       style={{
         backgroundImage:
-          "linear-gradient(135deg, rgba(137,28,81,0.88), rgba(175,94,138,0.88)), url('/images/service-bg.jpg')",
+          "linear-gradient(135deg, rgba(137,28,81,0.88), rgba(175,94,138,0.88)), url('/images/resources-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
