@@ -18,18 +18,18 @@ export default function AboutPageContent() {
           </div>
 
           <div className="space-y-4">
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-lg">
               Premier Senior Solutions dedication belongs to seniors and their families, to assist them in the next
               chapter of their journey. We are committed to finding the best options for seniors to live their best life
               yet!
             </p>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-lg">
               The search for the right choice for senior care can be a daunting one.{" "}
               <span className="font-bold text-foreground">That is where we come in.</span> With over 20 years in the
               senior and health care field, we know this industry inside and out and are here to be your guiding hand as
               we navigate it together.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-lg">
               Our process starts with an initial consultation together to discover exactly what is important to you and
               your loved ones in a community. We are then there throughout the entire journey with you &ndash; from
               scheduling tours of communities, all the way to completing admission paperwork, scheduling a move and

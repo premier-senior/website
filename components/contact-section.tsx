@@ -29,7 +29,7 @@ export default function ContactSection() {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
               Get in touch
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-lg">
               Call now to begin the process of finding a senior care facility that is right for you or your loved one. Jenny will help you schedule your initial consultation.
             </p>
           </div>

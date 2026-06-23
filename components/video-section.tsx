@@ -20,7 +20,7 @@ export default function VideoSection() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Navigating the next chapter
             </h2>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base mb-4">
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-lg mb-4">
               Making the move to senior living is a big step for your family, and we're here to help you with our expertise and guidance throughout the process. We ensure that your new home will suit your needs and be safe and comfortable.
             </p>
           </div>
