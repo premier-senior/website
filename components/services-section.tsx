@@ -44,7 +44,7 @@ export default function ServicesSection() {
       className="py-20 relative"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, rgba(175,94,138,0.8), rgba(137,28,81,0.8)), url('/images/service-bg.jpg')",
+          "linear-gradient(to bottom, rgba(137,28,81,0.88), rgba(175,94,138,0.88)), url('/images/service-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

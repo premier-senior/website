@@ -27,7 +27,7 @@ export default function TestimonialsHero() {
       className="relative overflow-hidden pt-32 pb-16 md:pb-0"
       style={{
         backgroundImage:
-          "linear-gradient(135deg, rgba(175,94,138,0.8), rgba(137,28,81,0.8)), url('/images/service-bg.jpg')",
+          "linear-gradient(135deg, rgba(137,28,81,0.88), rgba(175,94,138,0.88)), url('/images/service-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
