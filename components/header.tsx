@@ -36,7 +36,9 @@ export default function Header() {
         {/* Logo block — white card that slightly overflows the bar */}
         <Link
           href="/"
-          className="relative flex-shrink-0 bg-white flex flex-col items-center justify-center px-6 py-4 rounded-b-2xl shadow-md self-start mt-0 min-w-[160px]"
+          className={`relative flex-shrink-0 bg-white flex flex-col items-center justify-center px-6 py-4 rounded-b-2xl self-start mt-0 min-w-[160px] transition-shadow duration-300 ${
+            scrolled ? "shadow-none" : "shadow-md"
+          }`}
           style={{ zIndex: 10 }}
         >
           <Image
