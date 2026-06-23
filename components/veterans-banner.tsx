@@ -18,8 +18,7 @@ export default function VeteransBanner() {
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto">
         <h2 className="font-sans text-2xl md:text-3xl lg:text-4xl font-bold text-primary-foreground leading-tight text-balance mb-8">
-          We are now proud to assist in obtaining Veterans Aid
-          <br className="hidden md:block" /> and Attendance Benefits.
+          Find the right senior living solution for your loved one with trusted, compassionate guidance every step of the way.
         </h2>
         <Link
           href="#contact"
