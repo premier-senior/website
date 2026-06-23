@@ -75,7 +75,7 @@ export default function ServicesSection() {
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-balance">
           Services We&apos;re Offering
         </h2>
-        <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+        <p className="text-white/80 text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
           We help you find the perfect senior living community for your loved one. We work with only high-quality senior living communities, making sure they provide the best care possible at an affordable price.
         </p>
       </div>
@@ -90,10 +90,10 @@ export default function ServicesSection() {
               </div>
               {/* Content */}
               <div>
-                <h3 className="font-bold text-white text-base mb-2 leading-snug">
+                <h3 className="font-bold text-white text-xl mb-2 leading-snug">
                   {service.title}
                 </h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/80 text-lg leading-relaxed">
                   {service.description}
                 </p>
               </div>
