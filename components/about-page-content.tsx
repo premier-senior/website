@@ -92,20 +92,20 @@ export default function AboutPageContent() {
       <section className="py-16 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Left: portrait image */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-[30%]">
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/images/holly-adkins.png"
                 alt="Holly Adkins, Senior Living Advisor at Premier Senior Solutions"
-                width={700}
-                height={460}
+                width={500}
+                height={620}
                 className="w-full h-auto object-cover"
               />
             </div>
           </div>
 
           {/* Right: bio */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-[70%]">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-xs font-bold tracking-widest text-primary uppercase">
                 Holly Adkins, Senior Living Advisor
