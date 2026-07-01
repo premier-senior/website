@@ -2,6 +2,21 @@ import Image from "next/image"
 
 const testimonials = [
   {
+    name: "James Petro",
+    gender: "man",
+    text: "Jenny was a God send when we had to search for a senior living residence for our mother. Jenny was extremely helpful, knowledgeable, understanding and patient with my siblings and me when we had the daunting and overwhelming job of finding a senior living solution for our mother. I would not hesitate to recommend Jenny and Premier Senior Solutions to anyone in need of this service.",
+  },
+  {
+    name: "Ann Emery",
+    gender: "woman",
+    text: "I can't thank Jenny enough for the incredible support and guidance she provided while helping us find the right senior care community for my mother-in-law. This was an emotional decision and she made the process so much more manageable.",
+  },
+  {
+    name: "Lindsay Balmert",
+    gender: "woman",
+    text: "Jenny is simply the best! She was extremely helpful with placing my mother-in-law and my grandparents into the facilities they needed. Assisted living and nursing/memory care facilities can be super overwhelming with all the options and Jenny made the process so much easier for our family. She is knowledgeable, caring, and truly goes above and beyond for every family she works with.",
+  },
+  {
     name: "Susie B.",
     gender: "woman",
     text: "Jenny is the best! She went above and beyond helping my husband and I find a place for his father. And it was no easy task! We would recommend her to anyone looking for this type of service!",
