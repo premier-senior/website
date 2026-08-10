@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { submitLead } from "@/app/actions/leads"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,15 +10,27 @@ export default function ContactForm() {
     phone: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    alert("Thank you for your message! We will be in touch soon.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setStatus("submitting")
+    setErrorMessage("")
+
+    const result = await submitLead(formData)
+
+    if (result.ok) {
+      setStatus("success")
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } else {
+      setStatus("error")
+      setErrorMessage(result.error)
+    }
   }
 
   return (
@@ -89,11 +102,30 @@ export default function ContactForm() {
               required
             />
           </div>
+
+          {status === "success" && (
+            <p
+              role="status"
+              className="mb-4 rounded border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-foreground"
+            >
+              Thank you for your message! We will be in touch soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p
+              role="alert"
+              className="mb-4 rounded border border-destructive/40 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+            >
+              {errorMessage}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="px-10 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary rounded-xl shadow-[0_0_22px_4px_rgba(193,118,142,0.55)] transition-all hover:shadow-[0_0_28px_6px_rgba(193,118,142,0.7)] hover:opacity-95"
+            disabled={status === "submitting"}
+            className="px-10 py-3 font-bold text-sm tracking-wider text-primary-foreground bg-primary rounded-xl shadow-[0_0_22px_4px_rgba(193,118,142,0.55)] transition-all hover:shadow-[0_0_28px_6px_rgba(193,118,142,0.7)] hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            SUBMIT
+            {status === "submitting" ? "SENDING..." : "SUBMIT"}
           </button>
         </form>
       </div>
