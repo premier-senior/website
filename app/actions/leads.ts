@@ -5,6 +5,7 @@ import { leads } from "@/lib/db/schema"
 import { desc, eq } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import { isAdmin } from "@/lib/admin-auth"
+import { sendLeadNotification } from "@/lib/email"
 
 type SubmitResult = { ok: true } | { ok: false; error: string }
 
@@ -29,12 +30,26 @@ export async function submitLead(formData: {
   }
 
   try {
+    const safeName = name.slice(0, 200)
+    const safeEmail = email.slice(0, 200)
+    const safePhone = phone ? phone.slice(0, 50) : null
+    const safeMessage = message.slice(0, 5000)
+
     await db.insert(leads).values({
-      name: name.slice(0, 200),
-      email: email.slice(0, 200),
-      phone: phone ? phone.slice(0, 50) : null,
-      message: message.slice(0, 5000),
+      name: safeName,
+      email: safeEmail,
+      phone: safePhone,
+      message: safeMessage,
     })
+
+    // Notify the business admin. Email failures must not break submission.
+    await sendLeadNotification({
+      name: safeName,
+      email: safeEmail,
+      phone: safePhone,
+      message: safeMessage,
+    })
+
     return { ok: true }
   } catch (error) {
     console.log("[v0] submitLead error:", error)
