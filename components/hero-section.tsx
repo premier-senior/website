@@ -33,11 +33,11 @@ export default function HeroSection() {
           The inspiration to create this business was drawn from over 20 years of working in healthcare.
         </p>
         <p className="text-white/85 text-sm md:text-2xl leading-relaxed mb-8 max-w-xl mx-auto">
-          When it comes to your loved ones, you only want the best. Premier senior living prides itself in providing trusted senior living solutions to help you find the perfect fit. Our expert team will help you navigate the world of senior living and find the right place for you.
+          When it comes to your loved ones you only want the best. Premier senior living prides itself in providing trusted senior living solutions to help you find the perfect fit. Our expert team will help you navigate the world of senior living and find the right place for you.
         </p>
         <Link
           href="#about"
-          className="inline-block px-8 py-3 bg-primary-foreground text-primary font-bold text-sm tracking-wider rounded-xl shadow-[0_0_22px_4px_rgba(255,255,255,0.35)] transition-all hover:shadow-[0_0_28px_6px_rgba(255,255,255,0.5)] hover:opacity-95"
+          className="inline-block px-8 py-3 bg-blue-600 text-white font-bold text-sm tracking-wider rounded-xl shadow-[0_0_22px_4px_rgba(37,99,235,0.45)] transition-all hover:bg-blue-700 hover:shadow-[0_0_28px_6px_rgba(37,99,235,0.6)]"
         >
           LEARN MORE
         </Link>
