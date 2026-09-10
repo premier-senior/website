@@ -5,7 +5,7 @@ import { leads } from "@/lib/db/schema"
 import { desc, eq } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import { isAdmin } from "@/lib/admin-auth"
-import { sendLeadNotification } from "@/lib/email"
+import { sendLeadConfirmation, sendLeadNotification } from "@/lib/email"
 
 type SubmitResult = { ok: true } | { ok: false; error: string }
 
@@ -35,20 +35,25 @@ export async function submitLead(formData: {
     const safePhone = phone ? phone.slice(0, 50) : null
     const safeMessage = message.slice(0, 5000)
 
-    await db.insert(leads).values({
+    const [savedLead] = await db.insert(leads).values({
       name: safeName,
       email: safeEmail,
       phone: safePhone,
       message: safeMessage,
-    })
+    }).returning({ id: leads.id })
 
-    // Notify the business admin. Email failures must not break submission.
-    await sendLeadNotification({
+    const lead = {
       name: safeName,
       email: safeEmail,
       phone: safePhone,
       message: safeMessage,
-    })
+    }
+
+    // Notify both parties. Email failures must not break submission.
+    await Promise.all([
+      sendLeadNotification(lead, savedLead.id),
+      sendLeadConfirmation(lead, savedLead.id),
+    ])
 
     return { ok: true }
   } catch (error) {
