@@ -27,7 +27,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white text-sm leading-relaxed">
-              Premier Senior Solutions is a senior care placement agency serving the Greater Omaha and Iowa area. We specialize in finding the perfect placement for your loved one, regardless of their needs, desires, and budget.
+              Premier Senior Solutions is a senior care placement agency serving the greater Cleveland area. We specialize in finding the perfect placement for your loved one, regardless of their needs, desires, and budget.
             </p>
           </div>
 
