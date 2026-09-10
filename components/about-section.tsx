@@ -10,8 +10,8 @@ export default function AboutSection() {
           {/* Left: Photo Collage */}
           <div className="relative w-full lg:w-1/2 flex-shrink-0 order-2 lg:order-1">
             <Image
-              src="/images/about-collage.png"
-              alt="Jenny Kenderes of Premier Senior Solutions in various settings"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/new-collage-image-vkE9De4GHsGD7bUXRzQxjbsmldXhlA.png"
+              alt="Premier Senior Solutions founder in a collage of professional and community moments"
               width={690}
               height={800}
               className="w-full max-w-lg mx-auto h-auto"
