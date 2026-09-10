@@ -4,14 +4,14 @@ const infoCards = [
   {
     icon: Phone,
     label: "Phone Number",
-    value: "+ 1 216.410.0339",
+    value: "+1 (216) 410-0339",
     href: "tel:+12164100339",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "jkenderes@premier-senior.com",
-    href: "mailto:jkenderes@premier-senior.com",
+    value: "Jkenderes@premier-senior.com",
+    href: "mailto:Jkenderes@premier-senior.com",
   },
   {
     icon: MapPin,

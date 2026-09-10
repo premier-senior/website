@@ -23,7 +23,7 @@ function escapeHtml(value: string) {
  * Returns true on success. Never throws — email failures must not
  * break the contact form submission.
  */
-export async function sendLeadNotification(lead: LeadNotification): Promise<boolean> {
+export async function sendLeadNotification(lead: LeadNotification, leadId?: number): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY
   const from = process.env.RESEND_FROM_EMAIL
   const to = process.env.ADMIN_EMAIL
@@ -78,14 +78,17 @@ ${lead.message}
 `
 
   try {
-    const { error } = await resend.emails.send({
-      from: `${BRAND} <${from}>`,
-      to,
-      replyTo: lead.email,
-      subject: `New lead: ${lead.name}`,
-      html,
-      text,
-    })
+    const { error } = await resend.emails.send(
+      {
+        from: `${BRAND} <${from}>`,
+        to,
+        replyTo: lead.email,
+        subject: `New lead: ${lead.name}`,
+        html,
+        text,
+      },
+      { idempotencyKey: `lead-notification/${leadId ?? lead.email}` },
+    )
     if (error) {
       console.log("[v0] sendLeadNotification Resend error:", error)
       return false
@@ -96,3 +99,41 @@ ${lead.message}
     return false
   }
 }
+
+export async function sendLeadConfirmation(lead: LeadNotification, leadId?: number): Promise<boolean> {
+  const apiKey = process.env.RESEND_API_KEY
+  const from = process.env.RESEND_FROM_EMAIL
+
+  if (!apiKey || !from) {
+    console.log("[v0] sendLeadConfirmation skipped: missing RESEND_API_KEY or RESEND_FROM_EMAIL")
+    return false
+  }
+
+  const resend = new Resend(apiKey)
+  const safeName = escapeHtml(lead.name)
+  const safeMessage = escapeHtml(lead.message).replace(/\n/g, "<br />")
+  const html = `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a;"><h1 style="font-size:20px;font-weight:600;margin:0 0 8px;">Thank you for contacting ${BRAND}</h1><p style="font-size:15px;line-height:1.6;margin:0 0 20px;">Hi ${safeName}, we received your message and a member of our team will be in touch soon.</p><div style="background:#f7f7f7;border-radius:8px;padding:16px;font-size:14px;line-height:1.6;"><strong>Your message</strong><br />${safeMessage}</div><p style="font-size:13px;color:#666;line-height:1.5;margin:20px 0 0;">If you need to add anything, reply to this email and our team will help.</p></div>`
+  const text = `Thank you for contacting ${BRAND}, ${lead.name}.\n\nWe received your message and a member of our team will be in touch soon.\n\nYour message:\n${lead.message}\n`
+
+  try {
+    const { error } = await resend.emails.send(
+      {
+        from: `${BRAND} <${from}>`,
+        to: lead.email,
+        subject: `We received your message, ${lead.name}`,
+        html,
+        text,
+      },
+      { idempotencyKey: `lead-confirmation/${leadId ?? lead.email}` },
+    )
+    if (error) {
+      console.log("[v0] sendLeadConfirmation Resend error:", error)
+      return false
+    }
+    return true
+  } catch (error) {
+    console.log("[v0] sendLeadConfirmation threw:", error)
+    return false
+  }
+}
+
