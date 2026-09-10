@@ -91,11 +91,11 @@ export default function Footer() {
               </a>
             </div>
             <div className="flex flex-col gap-2 text-sm text-white">
-              <a href="tel:+14024260339" className="hover:text-white/70 transition-colors">
-                +1 (402) 426-0339
+              <a href="tel:+12164100339" className="hover:text-white/70 transition-colors">
+                +1 (216) 410-0339
               </a>
-              <a href="mailto:jennifer@premier-senior.com" className="hover:text-white/70 transition-colors break-all">
-                jennifer@premier-senior.com
+              <a href="mailto:Jkenderes@premier-senior.com" className="hover:text-white/70 transition-colors break-all">
+                Jkenderes@premier-senior.com
               </a>
             </div>
             {/* BBB Badge */}
